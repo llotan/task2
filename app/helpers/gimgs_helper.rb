@@ -1,0 +1,2 @@
+module GimgsHelper
+end

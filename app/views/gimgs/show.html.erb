@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @gimg.link %>
+</p>
+
+<p>
+  <strong>Good:</strong>
+  <%= @gimg.good_id %>
+</p>
+
+<%= link_to 'Edit', edit_gimg_path(@gimg) %> |
+<%= link_to 'Back', gimgs_path %>

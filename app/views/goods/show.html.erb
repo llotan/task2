@@ -1,0 +1,53 @@
+
+
+
+
+<div class="row">
+<h3><%= @good.name %></h3>  
+  <table  class=  <%= @good.name %> >
+	<th>
+<div class="span8">
+    <% if @good.gimgs.any? %>
+     
+      <ol class="gimgs">
+
+       <% @good.gimgs.each do |gimg| %>
+              <li>
+                   <img src=<%= gimg.link  %> width=200 height=200>
+              </li>
+       <% end %>
+
+     </ol>
+                <p> Images (<%= @good.gimgs.count %>)</p>
+    <% end %>
+  </div>
+	</th>
+<th>"         "</th>
+  	<th>
+  <aside>
+    
+    
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @good.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @good.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @good.description %>
+</p>
+
+</aside>
+  
+    </th>
+</table>
+
+
+</div>

@@ -1,0 +1,27 @@
+<%= form_with(model: gimg, local: true) do |form| %>
+  <% if gimg.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gimg.errors.count, "error") %> prohibited this gimg from being saved:</h2>
+
+      <ul>
+      <% gimg.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_field :link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :good_id %>
+    <%= form.number_field :good_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
